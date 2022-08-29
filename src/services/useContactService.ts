@@ -2,7 +2,7 @@ import { useHttp } from 'src/hooks/useHttp';
 import { IContact } from 'src/types/IContact';
 
 const useContactService = () => {
-  const _apiBase = 'http://localhost:5000/contact';
+  const _apiBase = 'https://appservertestnode.herokuapp.com/contact';
   const { request } = useHttp();
 
   const createContact = async (data:IContact) => {

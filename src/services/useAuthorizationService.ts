@@ -3,7 +3,7 @@ import { IUserSignInData } from 'src/types/IUserSignInData';
 import { IUserSignUpData } from 'src/types/IUserSignUpData';
 
 const useAuthorizationServices = () => {
-  const _apiBase = 'http://localhost:5000/auth';
+  const _apiBase = 'https://appservertestnode.herokuapp.com//auth';
   const { request } = useHttp();
 
   const signInUser = async (data:IUserSignInData) => {
