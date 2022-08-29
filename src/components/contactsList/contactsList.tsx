@@ -32,7 +32,6 @@ const ContactsList = () => {
                 <ContactItem
                   key={item?._id}
                   contact={item}
-                  sx={{ margin: '0 auto', maxWidth: 345 }}
                 />
               </animated.div>
             </Grid>
