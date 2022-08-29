@@ -27,7 +27,7 @@ const ContactItem = ({ contact }:ContactItemProps) => {
     if (contact) dispatch(deleteContactById(contact?._id));
   };
   return (
-    <Card className={styles.contact_item}>
+    <Card className={styles.contact_item} sx={{ margin: '0 auto', maxWidth: 345 }}>
       <CardHeader
         avatar={(
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
