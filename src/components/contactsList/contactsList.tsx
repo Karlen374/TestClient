@@ -16,28 +16,23 @@ const ContactsList = () => {
   });
   return (
     <div className={styles.contact}>
-      <Grid container spacing={3}>
-        {viewedUserContacts && viewedUserContacts?.length
-        && (
-        <div className="css-zow5z4-MuiGrid-root">
-          {transitions(({ opacity }, item) => (
-            <Grid item md={6} sm={6} lg={4} xs={12}>
-              <animated.div
-                style={{
-                  opacity: opacity.to({ output: [0.2, 1], range: [0, 1] }),
-                  transition: opacity
-                    .to(() => 'opacity 100ms ease-in'),
-                }}
-              >
-                <ContactItem
-                  key={item?._id}
-                  contact={item}
-                />
-              </animated.div>
-            </Grid>
-          ))}
-        </div>
-        )}
+      <Grid container spacing={3} className="">
+        {transitions(({ opacity }, item) => (
+          <Grid item md={6} sm={6} lg={4} xs={12}>
+            <animated.div
+              style={{
+                opacity: opacity.to({ output: [0.2, 1], range: [0, 1] }),
+                transition: opacity
+                  .to(() => 'opacity 100ms ease-in'),
+              }}
+            >
+              <ContactItem
+                key={item?._id}
+                contact={item}
+              />
+            </animated.div>
+          </Grid>
+        ))}
       </Grid>
     </div>
   );
