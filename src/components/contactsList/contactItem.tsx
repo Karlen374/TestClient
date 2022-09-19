@@ -13,7 +13,6 @@ import { red, yellow } from '@mui/material/colors';
 import LocationCityIcon from '@mui/icons-material/LocationCity';
 import { deleteContactById, getEditContactData } from 'src/store/slices/contactSlice';
 import { useAppDispatch } from 'src/hooks/hooks';
-// import styles from './contactsList.module.scss';
 
 interface ContactItemProps {
   contact: IContact | null;

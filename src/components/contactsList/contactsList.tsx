@@ -16,7 +16,9 @@ const ContactsList = () => {
   });
   return (
     <div className={styles.contact}>
-      <Grid container spacing={3} className="">
+      {viewedUserContacts && viewedUserContacts?.length
+      && (
+      <Grid container spacing={3}>
         {transitions(({ opacity }, item) => (
           <Grid item md={6} sm={6} lg={4} xs={12}>
             <animated.div
@@ -34,6 +36,7 @@ const ContactsList = () => {
           </Grid>
         ))}
       </Grid>
+      )}
     </div>
   );
 };
